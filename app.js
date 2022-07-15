@@ -16,8 +16,13 @@ const mainRouter = require('./routes/main');
 
 app.use('/municipio',municipioRouter);
 app.use('/estado',estadoRouter)
-app.use('/', mainRouter);
+// app.use('/', mainRouter);
 
+app.get('/',(req,res)=>{
+
+    res.send('Estoy en funcion api lugares').status(200)
+
+})
 
 app.listen(3002,()=>{
     console.log('servidor corriendo en el puerto 3002')
